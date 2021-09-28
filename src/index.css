@@ -1,13 +1,362 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+  margin-bottom: 1.5em;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+.wallet-logo,
+.git-logo {
+  font-size: 1.9rem;
+  cursor: pointer;
+}
+
+/* Home css topfold  */
+.topfold {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+.home-topfold {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+.searchdiv {
+  background: white;
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.topfold .searchbar {
+  height: 2rem;
+  width: 10rem;
+  border: none;
+  outline: none;
+}
+
+.topfold .search-icon {
+  font-size: 1.8rem;
+}
+
+.topfold button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.1em 1.5em 0.1em 1em;
+  cursor: pointer;
+  background: rgb(13, 80, 168);
+  border-radius: 5px;
+  color: white;
+}
+.topfold button .plus-icon {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .home-topfold{
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+
+/* add expense css topfold  */
+.addexpensediv {
+  width: 100%;
+  height: 100%;
+  background: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addexpense {
+  width: 80%;
+  height: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+.topaddexpesnse {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topaddexpesnse a {
+  font-size: 1.3rem;
+}
+/* form  search bars */
+.addform {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 3rem;
+    border-radius: 50px;
+background:rgb(6, 187, 163);
+box-shadow:  20px 20px 60px #676767,
+             -20px -20px 60px #ffffff;
+}
+.addform .form-title,.form-amount{
+  width:60%;
+  height: auto;
+  display:flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.addform label {
+font-size: 1.5rem;
+}
+
+#title,#amount {
+  height: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+/* category container  */
+.category-container{
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+.category-container label{
+  font-size: 1.3rem;
+}
+
+.category-head{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0.5rem;
+  cursor: pointer;
+}
+.category-head label{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.arrow{
+  font-size: 2rem;
+}
+.category-container{
+  cursor: pointer;
+  padding-right:1rem;
+}
+.category-container label{
+  cursor: pointer;
+}
+.category-icons{
+  font-size: 2rem;
+}
+
+/* plane div  */
+.plane {
+  bottom: 0;
+text-align: end;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.plane button {
+cursor: pointer;
+display:flex;
+align-items: center;
+padding: 0.5rem 1rem;
+gap: 0.4rem;
+background: crimson;
+border-radius: 12px;
+
+}
+.plane .plane-icon{
+    font-size: 1.5rem;
+}
+
+ /* empty list img  */
+ .emptylistimg{
+   height: 250px;
+   width: 300px;
+ }
+ .expense-list{
+   text-align: center;
+ }
+
+/* card  */
+
+.card-grand-parent{
+  width: 100%;
+  height: auto;
+  background: rgb(13, 80, 168);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+.card-parent{
+  width: 50%;
+  height: auto;
+  background: white;
+  height: auto;
+  display: flex;
+  margin-top: 0.5em;
+ margin-bottom: 1em;
+ align-items: center;
+  justify-content: space-between;
+  
+}
+.card-left-area{
+  display: flex;
+  gap: 0.5rem;
+}
+.card-info{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.card-title{
+  font-size: 1.3rem;
+}
+.card-time{
+  color: #676767;
+}
+.card-right-area{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.delete-icon{
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+section{
+  width: 100%;
+  height: auto;
+}
+/* modal css  */
+
+.modal-parent{
+  background: rgb(250, 250, 250);
+padding: 2em 2em;
+border-radius: 10px;
+max-width: 400px;
+min-width: 200px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+margin-bottom: 2em;
+
+}
+.modal-parent .modal-head{
+  color: green;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.modal-info h1{
+  font-size: 1.3rem;
+}
+.modal-info .cath1{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+}
+.modal-icons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.addicon{
+  background: crimson;
+  padding:0.5em 0.5em;
+  color: white;
+  font-weight: bolder;
+}
+.homeicon{
+  font-size: 2.5rem;
+  color: crimson;
+
+}
+@media screen and (max-width: 600px){
+  .modal-parent .modal-head{
+    font-size: 1rem;
+
+  }
+  .modal-info .cath1{
+    font-size: 1rem;
+  }
+  .modal-info h1{
+    font-size: 1rem;
+  }
+
+}
+
+/* only for galaxy fold  */
+@media screen and (max-width: 280px) and (max-width:285px){
+  .modal-parent .modal-head{
+    font-size: 0.8rem;
+
+  }
+  .modal-info .cath1{
+    font-size: 0.7rem;
+  }
+  .modal-info h1{
+    font-size: 0.8rem;
+  }
+}
+
+/* footer  */
+
+footer{
+  margin-top: 3em;
+  text-align: center;
 }
